@@ -52,7 +52,14 @@ function addItem(e) {
                 <i class="fas fa-trash"></i>
                 </button>
                 </div>
-        `;
+            `;
+
+        // add event listeners to both button;
+        const deleteBtn = element.querySelector(".delete-btn");
+        deleteBtn.addEventListener("click", deleteItem);
+        const editBtn = element.querySelector(".edit-btn")
+        editBtn.addEventListener("click", editItem);
+
 
     }
 }
