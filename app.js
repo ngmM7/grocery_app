@@ -135,6 +135,21 @@ function deleteItem(e){
 
 }
 
+// edit item
+
+function editItem(e){
+    const element = e.currentTarget.parentElement.parentElement;
+    // set edit item
+    editElement = e.currentTarget.parentElement.previousElementSibling;
+    //set form value
+    grocery.value = editElement.innerHTML;
+    editFlag = true;
+    editID = element.dateset.id;
+
+    submitBtn.textContent = "edit";
+    
+}
+
 
 
 }
