@@ -165,5 +165,16 @@ function addToLocalStorage(id, value){
     localStorage.setItem("list", JSON.stringify(items));
 }
 
+function getLocalStorage(){
+    return localStorage.getItem("list");
+
+    items = item.filter(function(item) {
+        if(item.id !==id){
+            return item;
+        }
+    });
+    localStorage.setItem("list", JSON.stringigy(items));
+}
+
 
 }
