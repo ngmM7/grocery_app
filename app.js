@@ -147,9 +147,14 @@ function editItem(e){
     editID = element.dateset.id;
 
     submitBtn.textContent = "edit";
-    
+
 }
 
-
+function setBackToDefault(){
+    grocery.value = "";
+    editFlag = false;
+    editID = " ";
+    submitBtn.textContent = "submit";
+}
 
 }
