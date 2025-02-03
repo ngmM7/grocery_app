@@ -92,6 +92,8 @@ function addItem(e) {
     }
 
     }
+
+
 function displayAlert(text, action){
     alert.textContent = text;
     alert.classList.add(`alert-${action}`);
@@ -102,6 +104,17 @@ function displayAlert(text, action){
         alert.classList.remove(`alert-${action}`);
 
     }, 1000);
+}
+
+
+// clear item
+function clearItems(){
+    const items = document.querySelectorAll(".grocery-item");
+    if (items.length > 0 ) {
+        items.forEach(function (item) {
+            list.removeChild(item);
+        });
+    }
 }
 
 
