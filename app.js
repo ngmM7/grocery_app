@@ -212,6 +212,28 @@ function setupItems(){
     }
 }
 
+function createListItem(id, value){
+    const element = document.createElement("article");
+    let attr = document.createAttribute("date-id");
+    attr.value = id;
+    element.setAttributeNode(attr);
+    element.classList.add("grocery-item");
+    element.innerHTML = `<p class="title">${value}</p>
+                <div class="btn-container">
+                <button type="tutton" class="edit-btn">
+                <i class="fas fa-edit"></i>
+                </button>
+                <button type="button" class="delete-btn">
+                <i class="fas fa-trash"></i>
+                </button>
+                </div>
+                `;
+    const deleteBtn = element.querySelector(".delete-btn");
+    deleteBtn.addEventListener("click", deleteItem);
+    const editBtn = element.querySelector(".edit-btn");
+    editBtn.addEventListener("click", edititem);
 
+    list.appendChild(element);
+}
 
 }
