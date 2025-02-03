@@ -176,5 +176,16 @@ function getLocalStorage(){
     localStorage.setItem("list", JSON.stringigy(items));
 }
 
+function removeFromLocalStorage(id){
+    let items = getLocalStorage();
+
+    items = items.filter(function(item){
+        if (item.id !== id) {
+            return item;
+        }
+    });
+
+    localStorage.setItem("list", JSON.stringify(items));
+}
 
 }
